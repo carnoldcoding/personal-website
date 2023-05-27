@@ -48,6 +48,7 @@ section {
       opacity: 0;
       background: linear-gradient(to top, $primary, transparent);
       transition: all 0.3s ease;
+      pointer-events: none;
     }
     &:hover {
       cursor: pointer;
