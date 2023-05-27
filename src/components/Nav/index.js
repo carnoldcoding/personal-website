@@ -1,45 +1,23 @@
 import { React } from "react";
-import { useState } from "react";
 import "./NavStyles.scss";
 
 const Nav = () => {
-  const [active, setActive] = useState("home");
   return (
     <nav>
       <ul>
-        <li
-          onClick={() => {
-            setActive("home");
-          }}
-          className={active === "home" && "active"}
-        >
+        <li data-to-scrollspy-id="Home">
           <a href="#Home">Home</a>
           <ion-icon name="home-outline"></ion-icon>
         </li>
-        <li
-          onClick={() => {
-            setActive("about");
-          }}
-          className={active === "about" && "active"}
-        >
+        <li>
           <a href="#About">About</a>
           <ion-icon name="person-circle-outline"></ion-icon>
         </li>
-        <li
-          onClick={() => {
-            setActive("portfolio");
-          }}
-          className={active === "portfolio" && "active"}
-        >
+        <li>
           <a href="#Portfolio">Portfolio</a>
           <ion-icon name="library-outline"></ion-icon>
         </li>
-        <li
-          onClick={() => {
-            setActive("contact");
-          }}
-          className={active === "contact" && "active"}
-        >
+        <li>
           <a href="#Contact">Contact</a>
           <ion-icon name="mail-outline"></ion-icon>
         </li>

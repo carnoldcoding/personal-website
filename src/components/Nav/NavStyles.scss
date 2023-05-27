@@ -14,7 +14,7 @@ nav {
       font-family: $primary-font;
       margin-top: 20px;
       overflow: hidden;
-      &.active {
+      &.active-scroll-spy{
         a {
           transform: translateY(100%);
           color: $nav-active;
