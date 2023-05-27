@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+}
+
+//Main
+$background: #0F0022; 
+$primary: #16BFE4;
+
+//Font
+$primary-font: "Poppins", sans-serif;
+$primary-font-color: #E4E4E4;
+$secondary-font-color: #969696;
+
+$nav-inactive: #0F859F;
+$nav-active: $primary;
+
+#root{
+    background: $background;
+    height: 200vh;
+}
