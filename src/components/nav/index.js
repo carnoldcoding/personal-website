@@ -1,9 +1,9 @@
 import { React } from "react";
-import { useState } from 'react';
+import { useState } from "react";
 import "./NavStyles.scss";
 
 const Nav = () => {
-    const [activeIndex, setActiveIndex] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState(-1);
   const nav = [
     {
       link: "#Home",
@@ -31,7 +31,12 @@ const Nav = () => {
       <ul>
         {nav.map(({ link, icon, text }, index) => {
           return (
-            <li class={activeIndex === index && "active"} onClick={()=>{setActiveIndex(index)}}>
+            <li
+              class={activeIndex === index && "active"}
+              onClick={() => {
+                setActiveIndex(index);
+              }}
+            >
               <a href={link}>{text}</a>
               <ion-icon name={icon}></ion-icon>
             </li>
