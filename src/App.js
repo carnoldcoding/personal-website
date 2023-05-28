@@ -21,10 +21,10 @@ function App() {
   return (
     <>
       {isMobile ? <MobileNav /> : <Nav />}
-      <ContactBar />
       <ScrollSpy scrollThrottle={100} useBoxMethod={false}>
         <Home />
       </ScrollSpy>
+      <ContactBar />
     </>
   );
 }
