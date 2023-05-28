@@ -5,26 +5,29 @@ import "./MobileNavStyles.scss";
 const MobileNav = () => {
   const [visible, setVisible] = useState(false);
   const handleClick = () => {
-      const body = document.querySelector('body');
-      visible ? body.style.overflow = "auto" : body.style.overflow = "hidden";
+    const body = document.querySelector("body");
+    visible ? (body.style.overflow = "auto") : (body.style.overflow = "hidden");
     setVisible(!visible);
   };
   return (
     <>
       <article className="mobile-nav">
-        <ion-icon onClick={handleClick} name="menu-outline"></ion-icon>
+        <ion-icon
+          onClick={handleClick}
+          name={visible ? "close-outline" : "menu-outline"}
+        ></ion-icon>
         {visible && (
           <ul>
-            <li>
+            <li onClick={handleClick}>
               <a href="#Home">Home</a>
             </li>
-            <li>
+            <li onClick={handleClick}>
               <a href="#About">About</a>
             </li>
-            <li>
+            <li onClick={handleClick}>
               <a href="#Portfolio">Portfolio</a>
             </li>
-            <li>
+            <li onClick={handleClick}>
               <a href="#Contact">Contact</a>
             </li>
           </ul>
