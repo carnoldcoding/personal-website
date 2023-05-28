@@ -1,0 +1,37 @@
+import React from "react";
+import { useState } from "react";
+import "./MobileNavStyles.scss";
+
+const MobileNav = () => {
+  const [visible, setVisible] = useState(false);
+  const handleClick = () => {
+      const body = document.querySelector('body');
+      visible ? body.style.overflow = "auto" : body.style.overflow = "hidden";
+    setVisible(!visible);
+  };
+  return (
+    <>
+      <article className="mobile-nav">
+        <ion-icon onClick={handleClick} name="menu-outline"></ion-icon>
+        {visible && (
+          <ul>
+            <li>
+              <a href="#Home">Home</a>
+            </li>
+            <li>
+              <a href="#About">About</a>
+            </li>
+            <li>
+              <a href="#Portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#Contact">Contact</a>
+            </li>
+          </ul>
+        )}
+      </article>
+    </>
+  );
+};
+
+export default MobileNav;
