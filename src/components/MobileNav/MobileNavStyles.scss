@@ -11,6 +11,12 @@
         color: $primary;
         font-size: 3rem;
         z-index: 2;
+        &:active{
+            color: white;
+        }
+        &:hover{
+            cursor: pointer;
+        }
     }
     ul{
         position: fixed;
@@ -22,11 +28,14 @@
         align-items: center;
         flex-direction: column;
         list-style: none;
-        gap: 2rem;
+        gap: 4rem;
+        li:hover{
+            cursor: pointer;
+        }
         li > a{
             text-transform: uppercase;
             font-family: $primary-font;
-            font-size: 4rem;
+            font-size: 2rem;
             text-decoration: none;
             color: $primary;
             &:active{
