@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       {isMobile ? <MobileNav /> : <Nav />}
-      <ScrollSpy offsetBottom={50}  scrollThrottle={100} >
+      <ScrollSpy offsetTop={10} offsetBottom={100}  scrollThrottle={100}>
         <Home />
         <About />
       </ScrollSpy>
