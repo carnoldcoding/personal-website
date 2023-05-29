@@ -12,6 +12,7 @@
     justify-content: center;
     max-width: $content-width;
     margin: auto;
+    gap: 2rem;
     &.alt{
         flex-direction: row-reverse;
     }
