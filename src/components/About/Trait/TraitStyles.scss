@@ -1,0 +1,33 @@
+@import "../../../App.scss";
+
+.trait{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 200px;
+    width: 900px;
+    margin: auto;
+    &.alt{
+        flex-direction: row-reverse;
+    }
+    div > svg{
+        max-width: 500px;
+    }
+    aside{
+        max-width: 600px;
+        font-family: "Poppins", sans-serif;
+        div > svg{
+            height: 450px;
+        }
+        h1{
+            font-size: 4rem;
+            color: white;
+        }
+        p{
+            color: $secondary-font-color;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    } 
+}

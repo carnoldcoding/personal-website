@@ -13,6 +13,9 @@ html{
 $background: #0F0022; 
 $primary: #16BFE4;
 
+//Media Cutoffs
+$tablet: 920px;
+
 //Font
 $primary-font: "Poppins", sans-serif;
 $primary-font-color: #E4E4E4;
@@ -24,5 +27,4 @@ $nav-active: $primary;
 #root{
     position: relative;
     background: $background;
-    height: 200vh;
 }
