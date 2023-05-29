@@ -1,30 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    border: 0;
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 //Main
-$background: #0F0022; 
-$primary: #16BFE4;
+$background: #0f0022;
+$primary: #16bfe4;
+$content-width: 1000px;
 
 //Media Cutoffs
 $tablet: 920px;
 
 //Font
 $primary-font: "Poppins", sans-serif;
-$primary-font-color: #E4E4E4;
+$primary-font-color: #e4e4e4;
 $secondary-font-color: #969696;
 
-$nav-inactive: #0F859F;
+$nav-inactive: #0f859f;
 $nav-active: $primary;
-
-#root{
-    position: relative;
-    background: $background;
-}

@@ -1,0 +1,9 @@
+@import "./App.scss";
+#root{
+    position: relative;
+    background: $background;
+    padding: 0 200px;
+    @media screen and (max-width: 920px){
+        padding: 0 60px;
+    }
+}

@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import MobileNav from "./components/MobileNav";
 import About from "./components/About";
 import "./App.scss";
+import "./general.scss";
 import ScrollSpy from "react-ui-scrollspy";
 import { useState, useEffect } from "react";
 

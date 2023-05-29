@@ -1,18 +1,23 @@
 @import "../../../App.scss";
 
+.trait-container{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .trait{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    gap: 200px;
-    width: 900px;
+    max-width: $content-width;
     margin: auto;
     &.alt{
         flex-direction: row-reverse;
     }
-    div > svg{
+    svg{
         max-width: 500px;
+        min-width: 300px;
     }
     aside{
         max-width: 600px;
@@ -21,13 +26,26 @@
             height: 450px;
         }
         h1{
-            font-size: 4rem;
+            font-size: clamp(2.5rem, 4vw, 4rem);
             color: white;
         }
         p{
             color: $secondary-font-color;
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
             font-weight: 500;
+        }
+    } 
+    @media screen and (max-width: 920px){
+        flex-direction: column;
+        border-radius: 10px;
+        gap: 2rem;
+        height: 500px;
+        max-width: 400px;
+        svg{
+            width: 100%;
+        }
+        &.alt{
+            flex-direction: column;
         }
     } 
 }
