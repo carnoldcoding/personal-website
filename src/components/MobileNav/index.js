@@ -12,10 +12,12 @@ const MobileNav = () => {
   return (
     <>
       <article className="mobile-nav">
-        <ion-icon
-          onClick={handleClick}
-          name={visible ? "close-outline" : "menu-outline"}
-        ></ion-icon>
+        <aside>
+          <ion-icon
+            onClick={handleClick}
+            name={visible ? "close-outline" : "menu-outline"}
+          ></ion-icon>
+        </aside>
         {visible && (
           <ul>
             <li onClick={handleClick}>
