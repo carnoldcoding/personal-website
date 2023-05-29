@@ -24,14 +24,14 @@
       h3 {
         color: $secondary-font-color;
         align-self: flex-end;
-        font-size: 1.5rem;
+        font-size: clamp(1rem, 2vw, 1.5rem);
       }
     }
     h1 {
       flex-basis: auto;
       position: relative;
       text-transform: uppercase;
-      font-size: 10em;
+      font-size: clamp(3em, 11vw, 10em);
       color: transparent;
       -webkit-text-stroke: 2px var(--clr);
       &::after {
@@ -44,16 +44,21 @@
     }
     p {
       color: white;
-      font-size: 1.7rem;
+      font-size: clamp(1.2rem, 3vw, 1.7rem);
     }
     aside {
       position: relative;
       display: flex;
       gap: 1.5rem;
       align-self: flex-end;
+      justify-content: center;
+      flex-wrap: wrap;
       border: 2px solid $primary;
       border-radius: 1rem;
       padding: 15px 30px;
+      @media screen and (max-width: 420px){
+          padding: 15px 10px;
+      }
       &::before {
         content: "<stack/>";
         position: absolute;
@@ -67,6 +72,7 @@
         color: $primary;
         font-size: 4rem;
         transition: all 0.2s ease;
+        flex-basis: 4rem;
         &:hover {
           cursor: pointer;
           color: white;
