@@ -9,15 +9,15 @@ const Nav = () => {
           <a href="#Home">Home</a>
           <ion-icon name="home-outline"></ion-icon>
         </li>
-        <li>
+        <li data-to-scrollspy-id="About">
           <a href="#About">About</a>
           <ion-icon name="person-circle-outline"></ion-icon>
         </li>
-        <li>
+        <li data-to-scrollspy-id="Portfolio">
           <a href="#Portfolio">Portfolio</a>
           <ion-icon name="library-outline"></ion-icon>
         </li>
-        <li>
+        <li data-to-scrollspy-id="Contact">
           <a href="#Contact">Contact</a>
           <ion-icon name="mail-outline"></ion-icon>
         </li>
