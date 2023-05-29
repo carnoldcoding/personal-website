@@ -22,6 +22,7 @@ $nav-inactive: #0F859F;
 $nav-active: $primary;
 
 #root{
+    position: relative;
     background: $background;
     height: 200vh;
 }
