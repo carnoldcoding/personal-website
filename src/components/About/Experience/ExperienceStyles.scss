@@ -20,7 +20,15 @@
       color: white;
       span {
         position: relative;
-        color: $primary;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 3px;
+            width: calc(100% + 30px);
+            background: $primary;
+        }
       }
     }
     .subtext {
