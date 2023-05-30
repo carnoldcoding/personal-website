@@ -5,7 +5,7 @@ const Experience = ({ job, timeframe, achievements }) => {
       <article className="experience">
         <header>
           <h1>
-            <span>&lt;</span>Experience<span>/&gt;</span>
+            <span>&lt;</span>Experience <span>/&gt;</span>
           </h1>
           <div className="subtext">
             <h3>{job}</h3>
