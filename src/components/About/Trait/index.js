@@ -7,7 +7,7 @@ const Trait = ({ image, title, text, reverse }) => {
       <article className={reverse ? "trait alt" : "trait"}>
         {image}
         <aside>
-          <h1>{title}</h1>
+          <h1><span>{title}</span></h1>
           <p>{text}</p>
         </aside>
       </article>

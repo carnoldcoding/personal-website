@@ -5,11 +5,14 @@ $content-width: 1000px;
 
 //Media Cutoffs
 $tablet: 920px;
+$section-max-width: 1000px;
 
 //Font
 $primary-font: "Poppins", sans-serif;
 $primary-font-color: #e4e4e4;
 $secondary-font-color: #969696;
+
+$header-size: clamp(2.15rem, 3vw, 3rem);
 
 $nav-inactive: #0f859f;
 $nav-active: $primary;

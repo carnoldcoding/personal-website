@@ -7,7 +7,7 @@
   justify-content: center;
   .intro {
     min-height: 100vh;
-    max-width: 1000px;
+    max-width: $section-max-width;
     font-family: "Poppins", sans-serif;
     position: relative;
     display: flex;
@@ -31,7 +31,7 @@
       flex-basis: auto;
       position: relative;
       text-transform: uppercase;
-      font-size: clamp(3em, 11vw, 10em);
+      font-size: clamp(4rem, 11vw, 10rem);
       color: transparent;
       -webkit-text-stroke: 2px var(--clr);
       &::after {
