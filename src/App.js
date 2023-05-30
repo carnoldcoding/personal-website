@@ -3,6 +3,7 @@ import ContactBar from "./components/ContactBar";
 import Home from "./components/Home";
 import MobileNav from "./components/MobileNav";
 import About from "./components/About";
+import Portfolio from "./components/Portfolio"
 import "./App.scss";
 import "./general.scss";
 import ScrollSpy from "react-ui-scrollspy";
@@ -26,6 +27,7 @@ function App() {
       <ScrollSpy offsetTop={10} offsetBottom={100}  scrollThrottle={100}>
         <Home />
         <About />
+        <Portfolio />
       </ScrollSpy>
       <ContactBar />
     </>

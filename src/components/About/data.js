@@ -21,7 +21,8 @@ const trait3 = {
 };
 
 const experience1 = {
-  job: "Geiger - Web Developer I",
+  job: `Web Developer I`,
+    company: "Geiger",
   timeframe: "2022 - Current",
   achievements: [
     "Developed scalable and efficient eCommerce solutions for various corporations including State Farm, Blue Cros, and Ingersoll Rand.",

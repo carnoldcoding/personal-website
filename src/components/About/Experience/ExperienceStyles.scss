@@ -35,18 +35,26 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 30px;
+      margin-top: 20px;
       @media screen and (max-width: 580px) {
         flex-direction: column;
         gap: 10px;
       }
       h3 {
+          &:first-of-type{
+              font-size: clamp(1.25rem, 2vw, 1.5rem);
+              color: white;
+              span{
+                  color: $primary;
+              }
+          }
         color: $secondary-font-color;
         font-size: clamp(1.1rem, 2vw, 1.25rem);
       }
     }
   }
   .achievements {
-    color: white;
+    color: lightgrey;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -74,7 +82,7 @@
     margin-top: 30px;
     ion-icon{
         color: $primary;
-        font-size: 3rem;
+        font-size: clamp(2.25rem, 3vw, 3rem);
         transition: all .2s ease;
         &:hover{
             cursor: pointer;
@@ -90,5 +98,6 @@
         color: $primary;
         transition: all .2s ease;
         transition-delay: .075s;
+        font-size: clamp(1rem, 3vw, 1.25rem);
     }
 }
