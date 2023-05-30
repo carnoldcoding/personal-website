@@ -2,9 +2,8 @@ import React from "react";
 import "./TraitStyles.scss";
 
 const Trait = ({ image, title, text, reverse }) => {
-  console.log(reverse);
   return (
-    <div class="trait-container">
+    <div className="trait-container">
       <article className={reverse ? "trait alt" : "trait"}>
         {image}
         <aside>

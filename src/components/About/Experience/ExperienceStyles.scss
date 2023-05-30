@@ -1,0 +1,86 @@
+@import "../../../App.scss";
+
+.experience-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.experience {
+  position: relative;
+  font-family: $primary-font;
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    h1 {
+      position: relative;
+      font-size: clamp(2.15rem, 3vw, 3rem);
+      color: white;
+      span {
+        position: relative;
+        color: $primary;
+      }
+    }
+    .subtext {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      @media screen and (max-width: 580px) {
+        flex-direction: column;
+        gap: 10px;
+      }
+      h3 {
+        color: $secondary-font-color;
+        font-size: clamp(1.1rem, 2vw, 1.25rem);
+      }
+    }
+  }
+  .achievements {
+    color: white;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @media screen and (max-width: 920px) {
+      gap: 1rem;
+    }
+    li {
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      padding-left: 10px;
+      margin-left: 20px;
+      &::marker {
+        content: "➤";
+        color: $primary;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.download{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    ion-icon{
+        color: $primary;
+        font-size: 3rem;
+        transition: all .2s ease;
+        &:hover{
+            cursor: pointer;
+            transform: translateY(-5px);
+            color: white;
+            &+p{
+                color: white;
+                transform: translateY(-5px);
+            }
+        }
+    }
+    p{
+        color: $primary;
+        transition: all .2s ease;
+        transition-delay: .075s;
+    }
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import "./AboutStyles.scss";
 import Trait from "./Trait";
-import { trait1, trait2, trait3 } from "./data";
+import Experience from "./Experience";
+import { trait1, trait2, trait3, experience1 } from "./data";
 
 const About = () => {
   return (
@@ -34,6 +35,7 @@ const About = () => {
       <Trait {...trait1} reverse={true} />
       <Trait {...trait2} reverse={false} />
       <Trait {...trait3} reverse={true} />
+      <Experience {...experience1} />
     </section>
   );
 };
