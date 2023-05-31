@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import "./FeaturedProjectStyles.scss";
 
 const FeaturedProject = ({ header, site, image, description }) => {

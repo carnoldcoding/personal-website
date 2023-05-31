@@ -6,4 +6,9 @@ const featured1 = {
     description:"Single Page Application designed with the intent of showcasing the client's artistic talent while retaining industry standards to simplify user experience."
 }
 
-export {featured1}
+const project1 = {
+    project: "NeoVim Configuration",
+    description: "NeoVim configuration written purely in Lua"
+}
+
+export {featured1, project1}
