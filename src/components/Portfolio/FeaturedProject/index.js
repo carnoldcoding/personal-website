@@ -1,22 +1,19 @@
 import React from "react";
 import "./FeaturedProjectStyles.scss";
 
-const FeaturedProject = ({ header, site, image, stack, description }) => {
+const FeaturedProject = ({ header, site, image, description }) => {
   return (
     <article className="featured">
-      <aside>
+      <div className="content" data-bg={image}>
         <header>
           <h3>{header}</h3>
           <h1>{site}</h1>
         </header>
         <p>{description}</p>
-        <h3 className="stack">
-          {stack.map((item) => {
-            return <span>{item}</span>;
-          })}
-        </h3>
-      </aside>
-      <img src={image} alt="" />
+      </div>
+      <div className="image">
+        <img src={image} alt={site} />
+      </div>
     </article>
   );
 };

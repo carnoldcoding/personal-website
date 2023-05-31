@@ -1,49 +1,95 @@
 @import "../../../App.scss";
 
-.featured{
-    font-family: $primary-font;
+.featured {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $primary-font;
+  .content {
+    z-index: 1;
+    position: relative;
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    header {
+      h3 {
+        color: $primary;
+      }
+      h1 {
+        color: white;
+        font-size: 2rem;
+      }
+    }
+    p {
+      border: 2px solid $primary;
+      border-radius: 10px;
+      padding: 1.5rem;
+      line-height: 1.25em;
+      max-width: 600px;
+      color: lightgrey;
+      font-weight: 600;
+      background: $background;
+    }
+  }
+  .image {
+    width: clamp(500px, 32vw, 600px);
+    margin-left: -100px;
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (width <= 920px) {
+  .featured {
+    flex-direction: column-reverse;
     align-items: center;
-    max-width: $content-width;
-    img{
-        width: clamp(350px, 30vw, 570px);
+    .content {
+      background: $background;
+      margin-top: -100px;
+      border: 3px solid $primary;
+      border-radius: 10px;
+      padding: 1rem;
+      width: clamp(400px, 75vw, 600px);
+      p {
+        border: unset;
+        padding: unset;
+      }
     }
-    aside{
-        position: relative;
-        background: $background;
-        border-radius: 10px;
-        border: 3px solid $primary;
-        padding: 2rem;
-        min-width: 400px;
-        max-width: 800px;
-        margin-right: -20%;
-        header{
-            position: absolute;
-            top: -70px;
-            left: 0;
-            h3{
-                font-size: .9rem;
-                color: $primary;
-            }
-            h1{
-                color: white;
-                font-size: clamp(1.5rem, 2vw, 1.75rem);
-            }
-        }
-        p{
-            font-size: 1.25rem;
-            color: lightgray;
-        }
-        .stack{
-            display: flex;
-            left: 0;
-            gap: 1rem;
-            position: absolute;
-            bottom: -20%;
-            color: $secondary-font-color;
-            span{
-                font-size: 1rem;
-            }
-        }
+    .image {
+      width: 100%;
+      margin-left: unset;
     }
+  }
+}
+
+@media (width <= 700px) {
+  .featured {
+      position: relative;
+    .content {
+      height: 500px;
+      width: 100%;
+      &::before{
+          content: '';
+          z-index: -1;
+          opacity: .25;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background-image: url("../../../images/speedydoodle.png");
+          background-size: cover;
+          background-position: center;
+      }
+      p{
+          background: transparent;
+      }
+    }
+    .image{
+        display: none;
+    }
+  }
 }
