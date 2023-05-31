@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       {isMobile ? <MobileNav /> : <Nav />}
-      <ScrollSpy offsetTop={10} offsetBottom={100}  scrollThrottle={100}>
+      <ScrollSpy activeClass="active" offsetTop={10} offsetBottom={100}  scrollThrottle={100}>
         <Home />
         <About />
         <Portfolio />
