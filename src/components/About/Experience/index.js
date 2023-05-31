@@ -8,7 +8,9 @@ const Experience = ({ job, company, timeframe, achievements }) => {
             <span>Experience</span>
           </h1>
           <div className="subtext">
-            <h3>{job} <span>@{company}</span></h3>
+            <h3>
+              {job} <span>@{company}</span>
+            </h3>
             <h3>{timeframe}</h3>
           </div>
         </header>
