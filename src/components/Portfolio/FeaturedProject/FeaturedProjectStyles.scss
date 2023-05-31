@@ -1,0 +1,49 @@
+@import "../../../App.scss";
+
+.featured{
+    font-family: $primary-font;
+    display: flex;
+    align-items: center;
+    max-width: $content-width;
+    img{
+        width: clamp(350px, 30vw, 570px);
+    }
+    aside{
+        position: relative;
+        background: $background;
+        border-radius: 10px;
+        border: 3px solid $primary;
+        padding: 2rem;
+        min-width: 400px;
+        max-width: 800px;
+        margin-right: -20%;
+        header{
+            position: absolute;
+            top: -70px;
+            left: 0;
+            h3{
+                font-size: .9rem;
+                color: $primary;
+            }
+            h1{
+                color: white;
+                font-size: clamp(1.5rem, 2vw, 1.75rem);
+            }
+        }
+        p{
+            font-size: 1.25rem;
+            color: lightgray;
+        }
+        .stack{
+            display: flex;
+            left: 0;
+            gap: 1rem;
+            position: absolute;
+            bottom: -20%;
+            color: $secondary-font-color;
+            span{
+                font-size: 1rem;
+            }
+        }
+    }
+}
