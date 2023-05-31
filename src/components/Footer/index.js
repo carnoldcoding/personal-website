@@ -1,5 +1,5 @@
 import React from "react";
-import "./ContactBarStyles.scss";
+import "./FooterStyles.scss";
 
 const ContactBar = () => {
   return (

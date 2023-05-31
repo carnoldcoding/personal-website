@@ -1,5 +1,5 @@
 import Nav from "./components/Nav";
-import ContactBar from "./components/ContactBar";
+import Footer from "./components/Footer"; 
 import Home from "./components/Home";
 import MobileNav from "./components/MobileNav";
 import About from "./components/About";
@@ -29,7 +29,7 @@ function App() {
         <About />
         <Portfolio />
       </ScrollSpy>
-      <ContactBar />
+      <Footer />
     </>
   );
 }
