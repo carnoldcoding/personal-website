@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import MobileNav from "./components/MobileNav";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio"
+import Contact from "./components/Contact";
 import "./App.scss";
 import "./general.scss";
 import ScrollSpy from "react-ui-scrollspy";
@@ -28,6 +29,7 @@ function App() {
         <Home />
         <About />
         <Portfolio />
+      <Contact />
       </ScrollSpy>
       <Footer />
     </>
