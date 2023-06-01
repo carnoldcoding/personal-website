@@ -1,4 +1,5 @@
 import "./ExperienceStyles.scss";
+import resume from "../../../assets/resume.pdf"
 const Experience = ({ job, company, timeframe, achievements }) => {
   return (
     <div className="experience-container">
@@ -20,7 +21,9 @@ const Experience = ({ job, company, timeframe, achievements }) => {
           })}
         </ul>
         <aside className="download">
-          <ion-icon name="cloud-download-outline"></ion-icon>
+          <a href={resume} target="_blank" rel="noopener noreferrer">
+            <ion-icon name="cloud-download-outline"></ion-icon>
+          </a>
           <p>Full Resume</p>
         </aside>
       </article>
