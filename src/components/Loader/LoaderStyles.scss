@@ -1,0 +1,72 @@
+@import "../../App.scss";
+
+$timing: 1s;
+
+.loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    position: relative;
+    -webkit-text-stroke: 3px $primary;
+    color: transparent;
+    font-size: 20rem;
+    height: 10px;
+    overflow: hidden;
+    animation: $timing grow $timing ease forwards,
+      $timing fade calc($timing * 3) ease forwards;
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      height: 10px;
+      width: 10px;
+      animation: $timing ease expand forwards,
+        $timing collapse calc($timing * 2) ease forwards;
+      background: $primary;
+    }
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "C";
+      color: $primary;
+      height: 0;
+      overflow: hidden;
+      animation: $timing ease calc($timing * 2) fill forwards;
+    }
+  }
+}
+
+@keyframes fill {
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes grow {
+  to {
+    height: calc(1em + 20px);
+  }
+}
+
+@keyframes expand {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes collapse {
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 0;
+  }
+}
