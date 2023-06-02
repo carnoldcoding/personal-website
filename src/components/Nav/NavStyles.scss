@@ -16,6 +16,8 @@ nav {
       font-family: $primary-font;
       margin-top: 20px;
       overflow: hidden;
+      opacity: 0;
+      transform: translateX(-100px);
       &.active{
         a {
           transform: translateY(100%);
@@ -66,7 +68,7 @@ nav {
     aside {
       position: absolute;
       right: -25px;
-      height: 100%;
+      height: 0;
       width: 3px;
       top: 0;
       background: $primary;

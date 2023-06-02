@@ -7,34 +7,35 @@ const Nav = () => {
   const navItems = useRef([]);
   const scope = useRef();
   const bar = useRef();
-  const tl = gsap.timeline();
+  const tl = useRef();
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
+      tl.current = gsap.timeline();
       navItems.current.forEach((navItem) => {
-        tl.from(
+        tl.current.to(
           navItem,
           {
-            x: 100,
-            opacity: 0,
+            x: 0,
+            opacity: 1,
             duration: 0.5,
-            ease: Power3
+            ease: Power3,
           },
           "-=.3"
         );
       });
-      tl.from(
+      tl.current.to(
         bar.current,
         {
-          height: 0,
+          height: "100%",
           ease: Power3,
         },
-        "-=.2"
+        "-=.3"
       );
     }, scope);
 
     return () => ctx.revert();
-  });
+  }, []);
   return (
     <nav ref={scope}>
       <ul>

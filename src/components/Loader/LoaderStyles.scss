@@ -21,7 +21,8 @@ $timing: 1s;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      content: "";
+      content: '';
+      color: $primary;
       height: 10px;
       width: 10px;
       animation: $timing ease expand forwards,
@@ -39,6 +40,16 @@ $timing: 1s;
       animation: $timing ease calc($timing * 2) fill forwards;
     }
   }
+}
+
+#root{
+    animation: $timing transition calc($timing * 3) ease forwards;
+}
+
+@keyframes transition{
+    to{
+        background: $background;
+    }
 }
 
 @keyframes fill {

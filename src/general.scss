@@ -10,10 +10,11 @@
 
 html {
   scroll-behavior: smooth;
+  background: black;
 }
 #root {
   position: relative;
-  background: $background;
+  background: black;
   padding: 0 150px;
   @media screen and (max-width: 920px) {
     padding: 0 20px;

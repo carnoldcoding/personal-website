@@ -9,6 +9,8 @@
       list-style: none;
       font-size: 2.25rem;
       margin-bottom: 30px;
+      transform: translateY(100px) rotate(180deg);
+      opacity: 0;
       a {
         color: $primary;
         ion-icon {
@@ -28,6 +30,6 @@
     transform: translateX(-50%);
     background: $primary;
     width: 3px;
-    height: 100px;
+    height: 0;
   }
 }
