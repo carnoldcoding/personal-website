@@ -27,7 +27,7 @@ nav {
         }
       }
       &:nth-child(1).active ~ aside > .marker {
-        top: 3px;
+        top: 5px;
       }
       &:nth-child(2).active ~ aside > .marker {
         top: 40px;
@@ -75,12 +75,19 @@ nav {
         left: 50%;
         transform: translateX(-50%);
         height: 10px;
+        opacity: 0;
+        animation: .8s fadeIn .7s ease forwards;
         width: 10px;
         border-radius: 50%;
         background: $background;
         transition: all .3s ease;
-        border: 4px solid $primary;
+        border: 2px solid $primary;
       }
     }
   }
+}
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
 }

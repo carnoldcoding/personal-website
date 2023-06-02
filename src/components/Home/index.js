@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import ProfilePic from "../../images/PFP.png";
 import "./HomeStyles.scss";
 
 const Home = () => {
+
   return (
     <section id="Home">
       <article>
