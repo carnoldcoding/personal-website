@@ -7,6 +7,7 @@ import { featured1, projects } from "./data";
 const Portfolio = () => {
   return (
     <section id="Portfolio">
+      <h1 className="title">Portfolio</h1>
       <FeaturedProject {...featured1} />
       <Projects projects={projects}/>
     </section>

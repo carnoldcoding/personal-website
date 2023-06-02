@@ -2,4 +2,12 @@
 
 #Contact{
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        -webkit-text-stroke: 3px white;
+        font-size: 6rem;
+        text-transform: capitalize;
+    }
 }
