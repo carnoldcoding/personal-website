@@ -1,5 +1,6 @@
 import Nav from "./components/Nav";
 import Footer from "./components/Footer"; 
+import MobileFooter from "./components/MobileFooter";
 import Home from "./components/Home";
 import MobileNav from "./components/MobileNav";
 import About from "./components/About";
@@ -31,7 +32,7 @@ function App() {
         <Portfolio />
       <Contact />
       </ScrollSpy>
-      <Footer />
+      {isMobile ? <MobileFooter /> : <Footer />}
     </>
   );
 }

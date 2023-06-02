@@ -1,0 +1,33 @@
+@import "../../App.scss";
+
+.mobile-contact-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding-bottom: 30px;
+  gap: 1rem;
+  h3 {
+    color: white;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    li {
+      font-size: 2rem;
+      transition: all 0.2s ease;
+      a {
+        text-decoration: none;
+        color: $primary;
+        transition: all 0.2s ease;
+      }
+      &:hover {
+        transform: translateY(-5px);
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
