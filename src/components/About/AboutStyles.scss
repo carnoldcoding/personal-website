@@ -1,6 +1,7 @@
 @import "../../App.scss";
 
 #About {
+    position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,4 +91,11 @@
       }
     }
   }
+}
+.traits-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
 }

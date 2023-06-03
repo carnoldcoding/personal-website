@@ -3,7 +3,7 @@ import "./AboutStyles.scss";
 import Trait from "./Trait";
 import Experience from "./Experience";
 import { trait1, trait2, trait3, experience1 } from "./data";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
@@ -14,17 +14,20 @@ const About = () => {
   const subtext = useRef();
   const text = useRef();
   const stack = useRef();
+  const traitOne = useRef();
+  const traitTwo = useRef();
+  const traitThree = useRef();
   gsap.registerPlugin(ScrollTrigger);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({
         scrollTrigger: {
           trigger: scope.current,
           pin: true,
           start: "top top",
-          end: "+=1000",
-          scrub: true,
+          end: "+=3000",
+          scrub: 1
         },
       });
 
@@ -40,14 +43,22 @@ const About = () => {
       tl.current.from(subtext.current, {
         x: 100,
         opacity: 0,
-      });
-      tl.current.from(text.current, {
+      })
+      .from(text.current, {
         x: -100,
         opacity: 0,
-      });
-        tl.current.from(stack.current,{
-            opacity: 0
+      }).from(stack.current, {
+        opacity: 0,
+      })
+        .from(traitOne.current, {
+          x: "-100vw",
         })
+        .from(traitTwo.current, {
+          x: "100vw",
+        })
+        .from(traitThree.current, {
+          y: "100vh",
+        });
     }, scope);
     return () => ctx.revert();
   }, []);
@@ -100,9 +111,11 @@ const About = () => {
           <ion-icon name="logo-nodejs"></ion-icon>
         </aside>
       </article>
-      <Trait {...trait1} reverse={true} />
-      <Trait {...trait2} reverse={false} />
-      <Trait {...trait3} reverse={true} />
+      <div className="traits-container">
+        <Trait innerRef={traitOne} {...trait1} reverse={true} />
+        <Trait innerRef={traitTwo} {...trait2} reverse={false} />
+        <Trait innerRef={traitThree} {...trait3} reverse={true} />
+      </div>
       <Experience {...experience1} />
     </section>
   );

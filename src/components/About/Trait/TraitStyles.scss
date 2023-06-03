@@ -1,10 +1,15 @@
 @import "../../../App.scss";
 
 .trait-container{
-    height:100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: $background;
 }
 .trait{
     display: flex;

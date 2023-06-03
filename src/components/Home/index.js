@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import ProfilePic from "../../images/PFP.png";
 import "./HomeStyles.scss";
 import gsap from "gsap";
@@ -10,7 +10,7 @@ const Home = () => {
   const text = useRef();
   const tl = useRef();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline();
       tl.current.to(pfp.current, {

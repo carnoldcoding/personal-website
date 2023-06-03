@@ -1,4 +1,4 @@
-import { React, useEffect, useRef } from "react";
+import { React, useLayoutEffect, useRef } from "react";
 import "./NavStyles.scss";
 import { gsap } from "gsap";
 import { Power3 } from "gsap/gsap-core";
@@ -9,7 +9,7 @@ const Nav = () => {
     const bar = useRef();
     const tl = useRef();
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const ctx = gsap.context(() => {
             tl.current = gsap.timeline();
             navItems.current.forEach((navItem) => {

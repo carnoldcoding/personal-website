@@ -1,9 +1,9 @@
 import React from "react";
 import "./TraitStyles.scss";
 
-const Trait = ({ image, title, text, reverse }) => {
+const Trait = ({ image, title, text, reverse, innerRef }) => {
   return (
-    <div className="trait-container">
+    <div className="trait-container" ref={innerRef}>
       <article className={reverse ? "trait alt" : "trait"}>
         {image}
         <aside>

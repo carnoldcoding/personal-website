@@ -1,14 +1,14 @@
 import React from "react";
 import "./FooterStyles.scss";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 const ContactBar = () => {
     const scope = useRef();
     const tl = useRef();
     const links = useRef([]);
     const line = useRef();
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline();
         tl.current.from(scope, {delay: 1.6})
