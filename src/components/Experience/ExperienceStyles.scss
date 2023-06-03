@@ -1,13 +1,13 @@
-@import "../../../App.scss";
+@import "../../App.scss";
 
-.experience-container {
+#Experience{
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  max-width: $section-max-width;
 }
 .experience {
+    max-width: $content-width;
   position: relative;
   font-family: $primary-font;
   header {

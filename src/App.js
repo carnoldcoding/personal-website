@@ -7,42 +7,45 @@ import MobileNav from "./components/MobileNav";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import Experience from "./components/Experience";
+import {experience1} from "./components/Experience/data.js"
 import "./App.scss";
 import "./general.scss";
 import { useState, useEffect } from "react";
 
 function App() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-    const [Loading, setLoading] = useState(false);
-    const handleResize = () => {
-        setIsMobile(window.innerWidth <= 920);
-    };
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [Loading, setLoading] = useState(false);
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 920);
+  };
 
-    useEffect(() => {
-        setTimeout(() => {
-            setLoading(false);
-        }, 4000);
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    });
-    return (
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+  return (
+    <>
+      {Loading ? (
+        <Loader />
+      ) : (
         <>
-            {Loading ? (
-                <Loader />
-            ) : (
-                <>
-                    {isMobile ? <MobileNav /> : <Nav />}
-                    <Home />
-                    <About />
-                    <Portfolio />
-                    <Contact />
-                    {isMobile ? <MobileFooter /> : <Footer />}
-                </>
-            )}
+          {isMobile ? <MobileNav /> : <Nav />}
+          <Home />
+          <About />
+          <Experience {...experience1}/>
+          <Portfolio />
+          <Contact />
+          {isMobile ? <MobileFooter /> : <Footer />}
         </>
-    );
+      )}
+    </>
+  );
 }
 
 export default App;

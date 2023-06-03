@@ -1,8 +1,8 @@
 import "./ExperienceStyles.scss";
-import resume from "../../../assets/resume.pdf"
+import resume from "../../assets/resume.pdf"
 const Experience = ({ job, company, timeframe, achievements }) => {
   return (
-    <div className="experience-container">
+    <div id="Experience">
       <article className="experience">
         <header>
           <h1>

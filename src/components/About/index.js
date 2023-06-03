@@ -1,8 +1,7 @@
 import React from "react";
 import "./AboutStyles.scss";
 import Trait from "./Trait";
-import Experience from "./Experience";
-import { trait1, trait2, trait3, experience1 } from "./data";
+import { trait1, trait2, trait3} from "./data";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
@@ -124,7 +123,6 @@ const About = () => {
         <Trait innerRef={traitTwo} {...trait2} reverse={false} />
         <Trait innerRef={traitThree} {...trait3} reverse={true} />
       </div>
-      <Experience {...experience1} />
     </section>
   );
 };

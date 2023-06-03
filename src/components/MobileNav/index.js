@@ -27,6 +27,9 @@ const MobileNav = () => {
               <a href="#About">About</a>
             </li>
             <li onClick={handleClick}>
+              <a href="#Experience">Experience</a>
+            </li>
+            <li onClick={handleClick}>
               <a href="#Portfolio">Portfolio</a>
             </li>
             <li onClick={handleClick}>
