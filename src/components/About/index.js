@@ -27,7 +27,7 @@ const About = () => {
           pin: true,
           start: "top top",
           end: "+=3000",
-          scrub: 1
+          scrub: 1,
         },
       });
 
@@ -40,25 +40,33 @@ const About = () => {
           "<"
         );
       });
-      tl.current.from(subtext.current, {
-        x: 100,
-        opacity: 0,
-      })
-      .from(text.current, {
-        x: -100,
-        opacity: 0,
-      }).from(stack.current, {
-        opacity: 0,
-      })
+      tl.current
+        .from(subtext.current, {
+          x: 100,
+          opacity: 0,
+        })
+        .from(text.current, {
+          x: -100,
+          opacity: 0,
+        })
+        .from(stack.current, {
+          opacity: 0,
+        })
+        .to("body", { duration: 1 })
         .from(traitOne.current, {
           x: "-100vw",
         })
+
+        .to("body", { duration: 1 })
         .from(traitTwo.current, {
           x: "100vw",
         })
+
+        .to("body", { duration: 1 })
         .from(traitThree.current, {
           y: "100vh",
-        });
+        })
+        .to("body", { duration: 1 });
     }, scope);
     return () => ctx.revert();
   }, []);
