@@ -1,5 +1,5 @@
 import "./ExperienceStyles.scss";
-import resume from "../../assets/resume.pdf";
+import resumeDL from "../../assets/resume.pdf";
 import { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -62,7 +62,7 @@ const Experience = ({ job, company, timeframe, achievements }) => {
           })}
         </ul>
         <aside className="download" ref={resume}>
-          <a href={resume} target="_blank" rel="noopener noreferrer">
+          <a href={resumeDL} target="_blank" rel="noopener noreferrer">
             <ion-icon name="cloud-download-outline"></ion-icon>
           </a>
           <p>Full Resume</p>
