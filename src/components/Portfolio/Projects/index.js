@@ -28,15 +28,16 @@ const Projects = ({ projects }) => {
   }, []);
   return (
     <div className="more-work" ref={scope}>
+      <a href="#projects-container">
       <button
         onClick={toggle}
         ref={button}
         data-text={visible ? "less work" : "more work"}
       >
         {visible ? "less work" : "more work"}
-      </button>
+      </button></a>
       {visible && (
-        <article className="projects-container">
+        <article id="projects-container">
           {projects.map((project) => {
             return (
               <article className="project">
