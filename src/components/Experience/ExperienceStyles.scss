@@ -1,13 +1,13 @@
 @import "../../App.scss";
 
-#Experience{
+#Experience {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
 .experience {
-    max-width: $content-width;
+  max-width: $content-width;
   position: relative;
   font-family: $primary-font;
   header {
@@ -20,14 +20,14 @@
       color: white;
       span {
         position: relative;
-        &::after{
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            height: 3px;
-            width: calc(100% + 30px);
-            background: $primary;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          height: 3px;
+          width: calc(100% + 30px);
+          background: $primary;
         }
       }
     }
@@ -41,13 +41,13 @@
         gap: 10px;
       }
       h3 {
-          &:first-of-type{
-              font-size: clamp(1.25rem, 2vw, 1.5rem);
-              color: white;
-              span{
-                  color: $primary;
-              }
+        &:first-of-type {
+          font-size: clamp(1.25rem, 2vw, 1.5rem);
+          color: white;
+          span {
+            color: $primary;
           }
+        }
         color: $secondary-font-color;
         font-size: clamp(1.1rem, 2vw, 1.25rem);
       }
@@ -74,30 +74,36 @@
   }
 }
 
-.download{
+.download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  a {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    margin-top: 30px;
-    ion-icon{
-        color: $primary;
-        font-size: clamp(2.25rem, 3vw, 3rem);
-        transition: all .2s ease;
-        &:hover{
-            cursor: pointer;
-            transform: translateY(-5px);
-            color: white;
-            &+p{
-                color: white;
-                transform: translateY(-5px);
-            }
-        }
+    align-items: center;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+      ion-icon,
+      p {
+        color: white;
+        transform: translateY(-5px);
+      }
     }
-    p{
-        color: $primary;
-        transition: all .2s ease;
-        transition-delay: .075s;
-        font-size: clamp(1rem, 3vw, 1.25rem);
-    }
+  }
+
+  ion-icon {
+    color: $primary;
+    font-size: clamp(2.25rem, 3vw, 3rem);
+    transition: all 0.2s ease;
+  }
+  p {
+    color: $primary;
+    transition: all 0.2s ease;
+    transition-delay: 0.075s;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+  }
 }
