@@ -29,7 +29,7 @@ $letter-outline: $background;
 }
 .contact .envelope {
   position: absolute;
-  height: 94px;
+  height: 93px;
   width: 165px;
   left: 50%;
   margin-left: -83px;
@@ -85,7 +85,7 @@ $letter-outline: $background;
     top 300ms 150ms;
 
   height: 10px;
-  top: -60px;
+  top: -80px;
 
   transform: rotateX(180deg);
   -ms-transform: rotateX(180deg);
@@ -97,7 +97,7 @@ $letter-outline: $background;
   position: absolute;
   bottom: 0px;
   left: 0px;
-  border-left: 83px solid transparent;
+  border-left: 82px solid transparent;
   border-right: 82px solid transparent;
   border-top: 70px solid $letter-outline;
 }
@@ -163,7 +163,7 @@ $letter-outline: $background;
   -webkit-transition: margin-top 300ms 0ms;
 }
 .contact:hover .envelope .paper {
-  margin-top: -60px;
+  margin-top: -80px;
   transition: margin-top 300ms 150ms;
   -ms-transition: margin-top 300ms 150ms;
   -moz-transition: margin-top 300ms 150ms;
@@ -173,9 +173,9 @@ $letter-outline: $background;
 .contact .envelope .paper a {
   position: relative;
   display: block;
-  font-size: 14px;
-  margin: 5px;
-  margin-bottom: 0px;
+  font-size: 1.2rem;
+  padding:5px;
+  margin-bottom: 3px;
   text-align: center;
   color: #333;
   text-decoration: none;
@@ -190,7 +190,7 @@ $letter-outline: $background;
   border-width: 5px 0 5px 2px;
   border-style: solid;
   border-color: #555;
-  background: transparent;
+  background: $background;
 
   transform: rotate(-30deg);
   -ms-transform: rotate(-30deg);

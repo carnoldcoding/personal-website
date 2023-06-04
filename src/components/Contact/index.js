@@ -17,11 +17,12 @@ const Contact = () => {
           <div class="right"></div>
           <div class="cover"></div>
           <div class="paper">
-            <a class="call" href="tel:9735088737">
-              973-508-8737
-            </a>
             <a class="mail" href="mailto:carnoldcoding@gmail.com">
               @carnoldcoding
+            </a>
+
+            <a class="call" href="tel:9735088737">
+              973-508-8737
             </a>
           </div>
         </div>
