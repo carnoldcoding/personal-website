@@ -15,6 +15,7 @@ html {
 #root {
   position: relative;
   background: black;
+  overflow-x: hidden;
   padding: 0 150px;
   @media screen and (max-width: 920px) {
     padding: 0 20px;
