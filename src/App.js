@@ -14,7 +14,7 @@ import "./general.scss";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 920);
   const [Loading, setLoading] = useState(true);
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 920);

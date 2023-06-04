@@ -51,21 +51,21 @@ const About = () => {
         .from(stack.current, {
           opacity: 0,
         })
-        .to("body", { duration: 1 })
+        .to("body", { duration: .75})
         .from(traitOne.current, {
           x: "-100vw",
         })
 
-        .to("body", { duration: 1 })
+        .to("body", { duration: .75})
         .from(traitTwo.current, {
           x: "100vw",
         })
 
-        .to("body", { duration: 1 })
+        .to("body", { duration: .75})
         .from(traitThree.current, {
           y: "100vh",
         })
-        .to("body", { duration: 1 });
+        .to("body", { duration: .75});
     }, scope);
     return () => ctx.revert();
   }, []);
