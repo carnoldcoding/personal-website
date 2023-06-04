@@ -5,7 +5,7 @@ import { ReactComponent as KindSVG } from "../../images/kind.svg";
 const trait1 = {
   image: <DrivenSVG />,
   title: "Driven",
-  text: "I love building. Programming is a tool that I use towards that end. I express myself in the interfaces I create, the code that I write, and the designs that I breathe life into",
+  text: "I love building. Programming is a tool that I use towards that end. I express myself in the interfaces I create, the code that I write, and the designs that I develop.",
 };
 
 const trait2 = {
