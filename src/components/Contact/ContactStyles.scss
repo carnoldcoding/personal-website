@@ -10,17 +10,20 @@ $letter-outline: $background;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 100px;
+  gap: 150px;
   h1 {
     -webkit-text-stroke: 3px white;
-    font-size: 6rem;
+    font-size: clamp(4rem, 6vw, 6rem);
     text-transform: capitalize;
+    color: transparent;
+    span{
+        display: inline-block;
+    }
   }
 }
 
 .contact {
   position: relative;
-
   border-radius: 2px;
   -ms-border-radius: 2px;
   -moz-border-radius: 2px;
