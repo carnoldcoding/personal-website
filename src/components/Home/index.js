@@ -25,6 +25,7 @@ const Home = () => {
         }, "-=.6");
 
         tl.current.to(button.current, {
+            height: "100%",
             opacity: 1,
         }, "-=.2");
 
