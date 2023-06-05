@@ -18,6 +18,8 @@
     max-width: $content-width;
     margin: auto;
     gap: 2rem;
+    min-height: 100vh;
+    background: $background;
     &.alt{
         flex-direction: row-reverse;
     }
