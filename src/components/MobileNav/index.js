@@ -18,8 +18,7 @@ const MobileNav = () => {
             name={visible ? "close-outline" : "menu-outline"}
           ></ion-icon>
         </aside>
-        {visible && (
-          <ul>
+          <ul class={visible && "active"}>
             <li onClick={handleClick}>
               <a href="#Home">Home</a>
             </li>
@@ -36,7 +35,6 @@ const MobileNav = () => {
               <a href="#Contact">Contact</a>
             </li>
           </ul>
-        )}
       </article>
     </>
   );

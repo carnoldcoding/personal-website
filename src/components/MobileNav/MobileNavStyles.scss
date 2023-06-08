@@ -1,10 +1,9 @@
-@import "../../App.scss";
+ @import "../../App.scss";
 
 .mobile-nav{
     position: fixed;
     left: 0;
     top: 0;
-    background: black;
     z-index: 99;
     aside{
         position: fixed;
@@ -30,16 +29,25 @@
         }
     }
     ul{
+        transform: translateY(-100%);
+        transform-origin: top;
         position: fixed;
         height: 100vh;
         width: 100vw;
-        background: black;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         list-style: none;
         gap: 4rem;
+        pointer-events: none;
+        transition: all .2s ease;
+        background: black;
+
+        &.active{
+            pointer-events: unset;
+            transform: translateY(0);
+        }
         li:hover{
             cursor: pointer;
         }
