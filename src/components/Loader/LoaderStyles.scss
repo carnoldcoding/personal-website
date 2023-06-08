@@ -1,5 +1,5 @@
 @import "../../App.scss";
-
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
 $timing: 1s;
 
 .loader {
@@ -12,7 +12,9 @@ $timing: 1s;
     -webkit-text-stroke: 3px $primary;
     color: transparent;
     font-size: 20rem;
-    height: 10px;
+    font-family: "Konkhmer Sleokchher", sans-serif;
+    font-weight: 500;
+    height: 50px;
     overflow: hidden;
     animation: $timing grow $timing ease forwards,
       $timing fade calc($timing * 3) ease forwards;
@@ -60,7 +62,7 @@ $timing: 1s;
 
 @keyframes grow {
   to {
-    height: calc(1em + 20px);
+    height: calc(1.25em + 20px);
   }
 }
 
