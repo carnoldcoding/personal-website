@@ -26,7 +26,7 @@ const About = () => {
           pin: true,
           start: "top top",
           end: "+=3000",
-          scrub: 1,
+          scrub: 1
         },
       });
 

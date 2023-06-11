@@ -2,8 +2,8 @@
 
 .trait-container{
     position: absolute;
-    left: 0;
     top: 0;
+    left: -20px;
     height: 100%;
     width: 100%;
     display: flex;
@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center;
     max-width: $content-width;
-    margin: auto;
+    padding: 1rem;
     gap: 2rem;
     min-height: 100vh;
     background: $background;
@@ -59,12 +59,12 @@
     } 
     @media screen and (max-width: 920px){
         flex-direction: column;
-        border-radius: 10px;
-        gap: 2rem;
+        justify-content: center;
         height: 500px;
         max-width: 400px;
         svg{
             width: 100%;
+            height: auto;
         }
         &.alt{
             flex-direction: column;
