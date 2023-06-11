@@ -1,7 +1,5 @@
 import React from "react";
 import "./AboutStyles.scss";
-import Trait from "./Trait";
-import { trait1, trait2, trait3} from "./data";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
@@ -13,9 +11,6 @@ const About = () => {
   const subtext = useRef();
   const text = useRef();
   const stack = useRef();
-  const traitOne = useRef();
-  const traitTwo = useRef();
-  const traitThree = useRef();
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
@@ -25,8 +20,8 @@ const About = () => {
           trigger: scope.current,
           pin: true,
           start: "top top",
-          end: "+=3000",
-          scrub: 1
+          end: "+=1000",
+          scrub: 1,
         },
       });
 
@@ -50,22 +45,7 @@ const About = () => {
         })
         .from(stack.current, {
           opacity: 0,
-        })
-        .to("body", { duration: .75})
-        .from(traitOne.current, {
-          x: "-100vw",
-        })
-
-        .to("body", { duration: .75})
-        .from(traitTwo.current, {
-          x: "100vw",
-        })
-
-        .to("body", { duration: .75})
-        .from(traitThree.current, {
-          y: "100vh",
-        })
-        .to("body", { duration: .75});
+        });
     }, scope);
     return () => ctx.revert();
   }, []);
@@ -110,19 +90,32 @@ const About = () => {
           with my peers.
         </p>
         <aside ref={stack}>
-          <ion-icon name="logo-javascript"></ion-icon>
-          <ion-icon name="logo-html5"></ion-icon>
-          <ion-icon name="logo-css3"></ion-icon>
-          <ion-icon name="logo-sass"></ion-icon>
-          <ion-icon name="logo-react"></ion-icon>
-          <ion-icon name="logo-nodejs"></ion-icon>
+          <div class="stack-item">
+            <ion-icon name="logo-javascript"></ion-icon>
+            <span>javascript</span>
+          </div>
+          <div class="stack-item">
+            <ion-icon name="logo-html5"></ion-icon>
+            <span>html</span>
+          </div>
+          <div class="stack-item">
+            <ion-icon name="logo-css3"></ion-icon>
+            <span>css3</span>
+          </div>
+          <div class="stack-item">
+            <ion-icon name="logo-sass"></ion-icon>
+            <span>sass</span>
+          </div>
+          <div class="stack-item">
+            <ion-icon name="logo-react"></ion-icon>
+            <span>react</span>
+          </div>
+          <div class="stack-item">
+            <ion-icon name="logo-nodejs"></ion-icon>
+            <span>node.JS</span>
+          </div>
         </aside>
       </article>
-      <div className="traits-container">
-        <Trait innerRef={traitOne} {...trait1} reverse={true} />
-        <Trait innerRef={traitTwo} {...trait2} reverse={false} />
-        <Trait innerRef={traitThree} {...trait3} reverse={true} />
-      </div>
     </section>
   );
 };

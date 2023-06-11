@@ -42,7 +42,7 @@ const Home = () => {
         </p>
       </article>
       <a href="#About" ref={button}>
-        <button>explore</button>
+        <button data-text="scroll">scroll</button>
       </a>
     </section>
   );
