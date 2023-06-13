@@ -10,7 +10,6 @@ const About = () => {
   const fills = useRef([]);
   const subtext = useRef();
   const text = useRef();
-  const stack = useRef();
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
@@ -41,9 +40,6 @@ const About = () => {
         })
         .from(text.current, {
           x: -100,
-          opacity: 0,
-        })
-        .from(stack.current, {
           opacity: 0,
         });
     }, scope);
@@ -89,32 +85,6 @@ const About = () => {
           and simplicity in my work, to promote understanding and communication
           with my peers.
         </p>
-        <aside ref={stack}>
-          <div class="stack-item">
-            <ion-icon name="logo-javascript"></ion-icon>
-            <span>javascript</span>
-          </div>
-          <div class="stack-item">
-            <ion-icon name="logo-html5"></ion-icon>
-            <span>html</span>
-          </div>
-          <div class="stack-item">
-            <ion-icon name="logo-css3"></ion-icon>
-            <span>css3</span>
-          </div>
-          <div class="stack-item">
-            <ion-icon name="logo-sass"></ion-icon>
-            <span>sass</span>
-          </div>
-          <div class="stack-item">
-            <ion-icon name="logo-react"></ion-icon>
-            <span>react</span>
-          </div>
-          <div class="stack-item">
-            <ion-icon name="logo-nodejs"></ion-icon>
-            <span>node.JS</span>
-          </div>
-        </aside>
       </article>
     </section>
   );
