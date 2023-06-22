@@ -5,6 +5,7 @@ import MobileFooter from "./components/MobileFooter";
 import Home from "./components/Home";
 import MobileNav from "./components/MobileNav";
 import About from "./components/About";
+import Traits from "./components/Traits";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
@@ -38,6 +39,7 @@ function App() {
           {isMobile ? <MobileNav /> : <Nav />}
           <Home />
           <About />
+          <Traits />
           <Experience {...experience1}/>
           <Portfolio />
           <Contact />
