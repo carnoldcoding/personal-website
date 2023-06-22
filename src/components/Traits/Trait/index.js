@@ -3,7 +3,7 @@ import "./TraitStyles.scss";
 import gsap from "gsap";
 import { Power3 } from "gsap/gsap-core";
 
-const Trait = ({ title, text, image }) => {
+const Trait = ({ title, text, innerRef }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     isOpen ? tl.current.reverse() : tl.current.play();
@@ -35,20 +35,27 @@ const Trait = ({ title, text, image }) => {
         .to(wording.current, {
           opacity: 1,
           x: 0,
-        }).to("span", {
-            opacity: 1
-        }, "-=.5")
+        })
+        .to(
+          "span",
+          {
+            opacity: 1,
+          },
+          "-=.5"
+        );
     }, scope);
     return () => ctx.revert();
   }, []);
   return (
-    <article className="trait" ref={scope}>
-      <div ref={container} onClick={toggle}>
-      <span></span>
-        <h1 ref={header}>{title}</h1>
-        <p ref={wording}>{text}</p>
-      </div>
-    </article>
+    <span ref={scope}>
+      <article className="trait" ref={innerRef}>
+        <div ref={container} onClick={toggle}>
+          <span></span>
+          <h1 ref={header}>{title}</h1>
+          <p ref={wording}>{text}</p>
+        </div>
+      </article>
+    </span>
   );
 };
 
