@@ -16,6 +16,13 @@ const Trait = ({ title, text, innerRef }) => {
   const wording = useRef();
   const container = useRef();
 
+  const hoverPlay = () => {
+    isOpen && hover.current.play();
+  };
+  const hoverRev = () => {
+    isOpen && hover.current.reverse();
+  };
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       hover.current = gsap.timeline({
@@ -68,7 +75,7 @@ const Trait = ({ title, text, innerRef }) => {
   return (
     <span ref={scope}>
       <article className="trait" ref={innerRef}>
-        <div ref={container} onClick={toggle}>
+        <div ref={container} onMouseEnter={hoverPlay} onMouseLeave={hoverRev} onClick={toggle}>
           <span className="inset"></span>
           <span className="shine"></span>
           <h1 ref={header}>{title}</h1>
