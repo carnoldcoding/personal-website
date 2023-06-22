@@ -10,14 +10,13 @@ const trait1 = {
 
 const trait2 = {
   image: <CollabSVG />,
-  title: "Ally",
-  text: "Very little of what we do in programming comes solely from us. We don't develop the frameworks, libraries or languages that we program in. We use the tools that people are kind enough to make free. In that spirit, I like to contribute whatever I can, wherever I can.",
-};
+  title: "Creative",
+  text: "To be creative is to dare think outside the confines of an environment with the information it taught you. Being a software engineer means bringing innovation to each project we build, each file we make, and each line we write. "};
 
 const trait3 = {
   image: <KindSVG />,
   title: "Kind",
-  text: "Oddly enough, kindness is one of the more important aspects of programming. Being kind enough to welcome adverse ideas in safe discourse is a vital trait to have. Projects are rarely a one-man journey, kindness promotes diversity of thought and nourishes innovation in others.",
+  text: "Kindness is an important aspect of programming. Being kind enough to welcome adverse ideas in safe discourse is a vital trait to have. Projects are rarely a one-man journey, and kindness promotes diversity of thought which nourishes innovation in others.",
 };
 
 export { trait1, trait2, trait3};

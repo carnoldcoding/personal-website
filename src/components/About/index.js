@@ -82,16 +82,16 @@ const About = () => {
           <h3 ref={subtext}>I turn ideas into digital reality</h3>
         </div>
         <p ref={text}>
-          I'm a software engineer specializing in <i>building</i> and{" "}
-          <i>designing</i> unique digital experiences. I prioritize readability
-          and simplicity in my work, to promote understanding and communication
-          with my peers.
+          As a software engineer specializing in <span>building</span> and{" "}
+          <span>designing</span> unique digital experiences, I prioritize
+          readability and simplicity in my work to promote understanding and
+          communication with my peers.
         </p>
       </article>
       <article className="traits-container">
+        <Trait {...trait2} />
         <Trait {...trait1} />
         <Trait {...trait3} />
-        <Trait {...trait2} />
       </article>
     </section>
   );
