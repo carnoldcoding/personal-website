@@ -24,7 +24,7 @@ const Traits = () => {
                 opacity: 0,
                 duration: 1,
                 rotate: 270
-            }, "-=.6")
+            }, "-=.5")
         })
     }, scope);
     return () => ctx.revert();
