@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600&display=swap');
+$barlow: "Barlow", sans-serif;
+$inter: "Inter Tight", sans-serif;
+
+
 //Main
 $background: #0f0022;
 $primary: #16bfe4;
@@ -9,8 +14,9 @@ $tablet: 920px;
 $section-max-width: 1000px;
 
 //Font
-$primary-font: "Barlow", sans-serif;
+$primary-font: $inter;
 $primary-font-color: #e4e4e4;
+$secondary-font: "Poppins", sans-serif;
 $secondary-font-color: #969696;
 
 $header-size: clamp(2.15rem, 3vw, 3rem);
