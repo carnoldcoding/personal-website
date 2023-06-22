@@ -16,13 +16,22 @@
     &:hover {
       cursor: pointer;
     }
-    span{
+    .inset{
+      display: inline-block;
+      position: absolute;
+      inset: 5px;
+      border: 5px solid $background;
+      border-radius: 10px;
+      opacity: 0;
+    }
+    .shine{
         display: inline-block;
         position: absolute;
-        inset: 5px;
-        border: 5px solid $background;
-        border-radius: 10px;
-        opacity: 0;
+        left: -50%;
+        height: 100%;
+        width: 70px;
+        background: $primary;
+        transform: skew(40deg);
     }
 
     h1 {

@@ -6,17 +6,44 @@ import { Power3 } from "gsap/gsap-core";
 const Trait = ({ title, text, innerRef }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
-    isOpen ? tl.current.reverse() : tl.current.play();
     setIsOpen(!isOpen);
+    isOpen ? tl.current.play() : tl.current.reverse();
   };
   const tl = useRef();
+  const hover = useRef();
   const scope = useRef();
   const header = useRef();
   const wording = useRef();
   const container = useRef();
 
   useLayoutEffect(() => {
+    const handleEnter = () => {
+        console.log(isOpen);
+      !isOpen && hover.current.play();
+    };
+    const handleLeave = () => {
+      !isOpen && hover.current.reverse();
+    };
+    container.current.addEventListener("mouseenter", handleEnter);
+    container.current.addEventListener("mouseleave", handleLeave);
+
     const ctx = gsap.context(() => {
+      hover.current = gsap.timeline({
+        paused: true,
+        duration: ".2s",
+      });
+      hover.current
+        .to(container.current, {
+          y: -10,
+        })
+        .to(
+          ".shine",
+          {
+            left: "130%",
+          },
+          "<"
+        );
+
       tl.current = gsap.timeline({
         ease: Power3,
         paused: true,
@@ -44,13 +71,18 @@ const Trait = ({ title, text, innerRef }) => {
           "-=.5"
         );
     }, scope);
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      container.current.removeEventListener("mouseenter", handleEnter);
+      container.current.removeEventListener("mouseleave", handleLeave);
+    };
   }, []);
   return (
     <span ref={scope}>
       <article className="trait" ref={innerRef}>
         <div ref={container} onClick={toggle}>
-          <span></span>
+          <span className="inset"></span>
+          <span className="shine"></span>
           <h1 ref={header}>{title}</h1>
           <p ref={wording}>{text}</p>
         </div>
