@@ -3,6 +3,8 @@ import "./AboutStyles.scss";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import { trait1, trait2, trait3 } from "./data.js";
+import Trait from "./Trait";
 
 const About = () => {
   const scope = useRef();
@@ -85,6 +87,11 @@ const About = () => {
           and simplicity in my work, to promote understanding and communication
           with my peers.
         </p>
+      </article>
+      <article className="traits-container">
+        <Trait {...trait1} />
+        <Trait {...trait3} />
+        <Trait {...trait2} />
       </article>
     </section>
   );

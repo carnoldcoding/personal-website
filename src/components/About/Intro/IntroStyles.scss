@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import "../../../App.scss";
 
 #About {
   position: relative;
@@ -56,11 +56,4 @@
       }
     }
   }
-}
-.traits-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 3rem;
 }

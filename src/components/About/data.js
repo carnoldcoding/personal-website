@@ -5,12 +5,12 @@ import { ReactComponent as KindSVG } from "../../images/kind.svg";
 const trait1 = {
   image: <DrivenSVG />,
   title: "Driven",
-  text: "I love building. Programming is a tool that I use towards that end. I express myself in the interfaces I create, the code that I write, and the designs that I develop.",
+    text: "I trust myself to work with purpose. Give me a goal and I'll show you a path to achieve it."
 };
 
 const trait2 = {
   image: <CollabSVG />,
-  title: "Collaborative",
+  title: "Ally",
   text: "Very little of what we do in programming comes solely from us. We don't develop the frameworks, libraries or languages that we program in. We use the tools that people are kind enough to make free. In that spirit, I like to contribute whatever I can, wherever I can.",
 };
 
