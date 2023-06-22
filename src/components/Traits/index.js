@@ -16,6 +16,7 @@ const Traits = () => {
         scrollTrigger: {
           trigger: scope.current,
           start: "top center",
+            end: "center center",
         },
       });
         traits.current.forEach(trait=>{
