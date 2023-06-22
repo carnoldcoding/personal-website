@@ -12,6 +12,9 @@
     border: 3px solid $primary;
     user-select: none;
     padding: 80px;
+    @media screen and (max-width: 768px){
+        padding: 50px;
+    }
     overflow: hidden;
     &:hover {
       cursor: pointer;

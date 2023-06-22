@@ -36,7 +36,7 @@ const Trait = ({ title, text, innerRef }) => {
         .to(
           ".shine",
           {
-            left: "130%",
+            left: "150%",
           },
           "<"
         );
