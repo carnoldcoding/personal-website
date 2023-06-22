@@ -4,11 +4,6 @@ import gsap from "gsap";
 import { Power3 } from "gsap/gsap-core";
 
 const Trait = ({ title, text, innerRef }) => {
-  const [isOpen, setIsOpen] = useState(true);
-  const toggle = () => {
-    setIsOpen((isOpen) => !isOpen);
-    isOpen ? tl.current.play() : tl.current.reverse();
-  };
   const tl = useRef();
   const hover = useRef();
   const scope = useRef();
@@ -16,31 +11,15 @@ const Trait = ({ title, text, innerRef }) => {
   const wording = useRef();
   const container = useRef();
 
-  const hoverPlay = () => {
-    isOpen && hover.current.play();
+  const handleEnter = () => {
+    tl.current.play();
   };
-  const hoverRev = () => {
-    isOpen && hover.current.reverse();
+  const handleLeave = () => {
+    tl.current.reverse();
   };
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      hover.current = gsap.timeline({
-        paused: true,
-        duration: ".2s",
-      });
-      hover.current
-        .to(container.current, {
-          y: -10,
-        })
-        .to(
-          ".shine",
-          {
-            left: "150%",
-          },
-          "<"
-        );
-
       tl.current = gsap.timeline({
         ease: Power3,
         paused: true,
@@ -51,7 +30,7 @@ const Trait = ({ title, text, innerRef }) => {
         })
         .to(container.current, {
           height: "400px",
-          width: "clamp(350px, 70vw, 600px)",
+          width: "clamp(300px, 70vw, 600px)",
           borderRadius: "10px",
           background: "#16bfe4",
           boxShadow: "0 0 50px rgba(22, 191, 229, .5)",
@@ -75,7 +54,11 @@ const Trait = ({ title, text, innerRef }) => {
   return (
     <span ref={scope}>
       <article className="trait" ref={innerRef}>
-        <div ref={container} onMouseEnter={hoverPlay} onMouseLeave={hoverRev} onClick={toggle}>
+        <div
+          ref={container}
+          onMouseEnter={handleEnter}
+          onMouseLeave={handleLeave}
+        >
           <span className="inset"></span>
           <span className="shine"></span>
           <h1 ref={header}>{title}</h1>

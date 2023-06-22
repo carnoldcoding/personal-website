@@ -24,7 +24,7 @@ const Traits = () => {
                 x: -100,
                 opacity: 0,
                 duration: 1,
-                rotate: 270
+                rotate: "-270deg"
             }, "-=.5")
         })
     }, scope);
