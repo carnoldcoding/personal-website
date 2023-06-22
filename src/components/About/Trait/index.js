@@ -30,14 +30,14 @@ const Trait = ({ title, text, image }) => {
           width: "clamp(350px, 70vw, 600px)",
           borderRadius: "10px",
           background: "#16bfe4",
-          boxShadow: "0 0 80px rgba(22, 191, 229, .5)",
+          boxShadow: "0 0 50px rgba(22, 191, 229, .5)",
         })
         .to(wording.current, {
           opacity: 1,
           x: 0,
         }).to("span", {
             opacity: 1
-        }, "-=.2")
+        }, "-=.5")
     }, scope);
     return () => ctx.revert();
   }, []);
