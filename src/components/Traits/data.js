@@ -11,7 +11,7 @@ const trait1 = {
 const trait2 = {
   image: <CollabSVG />,
   title: "Creative",
-  text: "To be creative is to dare think outside the confines of an environment with the information it taught you. Being a software engineer means bringing innovation to each project we build, each file we make, and each line we write. "};
+  text: "Creativity happens when you dare think outside of the environment that taught you. Being a software engineer means bringing innovation to each project we build, each file we make, and each line we write. "};
 
 const trait3 = {
   image: <KindSVG />,
