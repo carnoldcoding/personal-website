@@ -4,9 +4,9 @@ import gsap from "gsap";
 import { Power3 } from "gsap/gsap-core";
 
 const Trait = ({ title, text, innerRef }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const toggle = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((isOpen) => !isOpen);
     isOpen ? tl.current.play() : tl.current.reverse();
   };
   const tl = useRef();
@@ -17,16 +17,6 @@ const Trait = ({ title, text, innerRef }) => {
   const container = useRef();
 
   useLayoutEffect(() => {
-    const handleEnter = () => {
-        console.log(isOpen);
-      !isOpen && hover.current.play();
-    };
-    const handleLeave = () => {
-      !isOpen && hover.current.reverse();
-    };
-    container.current.addEventListener("mouseenter", handleEnter);
-    container.current.addEventListener("mouseleave", handleLeave);
-
     const ctx = gsap.context(() => {
       hover.current = gsap.timeline({
         paused: true,
@@ -73,8 +63,6 @@ const Trait = ({ title, text, innerRef }) => {
     }, scope);
     return () => {
       ctx.revert();
-      container.current.removeEventListener("mouseenter", handleEnter);
-      container.current.removeEventListener("mouseleave", handleLeave);
     };
   }, []);
   return (
