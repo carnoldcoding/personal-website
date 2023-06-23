@@ -7,6 +7,7 @@ import MobileNav from "./components/MobileNav";
 import About from "./components/About";
 import Traits from "./components/Traits";
 import Portfolio from "./components/Portfolio";
+import PortfolioAlt from "./components/PortfolioAlt";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import {experience1} from "./components/Experience/data.js"
@@ -41,7 +42,7 @@ function App() {
           <About />
           <Traits />
           <Experience {...experience1}/>
-          <Portfolio />
+          <PortfolioAlt />
           <Contact />
           {isMobile ? <MobileFooter /> : <Footer />}
         </>
