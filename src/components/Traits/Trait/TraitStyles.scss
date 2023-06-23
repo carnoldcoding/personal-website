@@ -49,6 +49,15 @@
       color: transparent;
       font-family: $secondary-font;
     }
+    ion-icon{
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: clamp(3rem, 5vw, 4rem);
+        color: $primary;
+    }
     p {
       transform: translateX(100px);
       opacity: 0;

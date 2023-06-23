@@ -5,7 +5,6 @@ import { Power3 } from "gsap/gsap-core";
 
 const Trait = ({ title, text, innerRef }) => {
   const tl = useRef();
-  const hover = useRef();
   const scope = useRef();
   const header = useRef();
   const wording = useRef();
@@ -25,9 +24,20 @@ const Trait = ({ title, text, innerRef }) => {
         paused: true,
       });
       tl.current
-        .to(header.current, {
-          scale: 0,
+        .to("ion-icon", {
+          rotate: "-90",
+            duration: .3
         })
+        .to("ion-icon", {
+            bottom: "120%"
+        })
+        .to(
+          header.current,
+          {
+              top: "-100%"
+          },
+          "-=.45"
+        )
         .to(container.current, {
           height: "400px",
           width: "clamp(300px, 70vw, 600px)",
@@ -62,6 +72,7 @@ const Trait = ({ title, text, innerRef }) => {
           <span className="inset"></span>
           <span className="shine"></span>
           <h1 ref={header}>{title}</h1>
+          <ion-icon name="arrow-forward-circle-outline"></ion-icon>
           <p ref={wording}>{text}</p>
         </div>
       </article>
