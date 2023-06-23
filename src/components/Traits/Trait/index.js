@@ -4,37 +4,46 @@ import gsap from "gsap";
 import { Power3 } from "gsap/gsap-core";
 
 const Trait = ({ title, text, innerRef }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const tl = useRef();
   const scope = useRef();
   const header = useRef();
   const wording = useRef();
   const container = useRef();
+  const hover = useRef();
+  const toggle = () => {
+    setIsOpen(!isOpen);
+    isOpen ? tl.current.reverse() : tl.current.play();
+  };
 
   const handleEnter = () => {
-    tl.current.play();
+    hover.current.play();
   };
   const handleLeave = () => {
-    tl.current.reverse();
+    hover.current.reverse();
   };
-
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
+      hover.current = gsap.timeline({
+        paused: true,
+      });
+      hover.current.to("ion-icon", {
+        rotate: "-90deg",
+          color: "#fff"
+      }).to(header.current, {
+      }, "<");
       tl.current = gsap.timeline({
         ease: Power3,
         paused: true,
       });
       tl.current
         .to("ion-icon", {
-          rotate: "-90",
-            duration: .3
-        })
-        .to("ion-icon", {
-            bottom: "120%"
+          bottom: "120%",
         })
         .to(
           header.current,
           {
-              top: "-100%"
+            top: "-100%",
           },
           "-=.45"
         )
@@ -66,6 +75,7 @@ const Trait = ({ title, text, innerRef }) => {
       <article className="trait" ref={innerRef}>
         <div
           ref={container}
+          onClick={toggle}
           onMouseEnter={handleEnter}
           onMouseLeave={handleLeave}
         >
