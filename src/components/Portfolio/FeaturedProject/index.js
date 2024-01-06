@@ -11,9 +11,11 @@ const FeaturedProject = ({ header, site, image, description, infoRef, imgRef}) =
         </header>
         <p>{description}</p>
       </div>
-      <div className="image" ref={imgRef}>
-        <img src={image} alt={site} />
-      </div>
+      <a href="https://www.speedydoodle.com/" target="_blank">
+        <div className="image" ref={imgRef}>
+          <img src={image} alt={site} />
+        </div>
+      </a>
     </article>
   );
 };

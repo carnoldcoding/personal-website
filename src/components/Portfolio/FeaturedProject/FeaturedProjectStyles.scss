@@ -31,6 +31,12 @@
       background: $background;
     }
   }
+  a{
+    transition: all .2s ease;
+    &:hover{
+      transform: translateY(-10px);
+    }
+  }
   .image {
     width: clamp(500px, 32vw, 600px);
     margin-left: -100px;
