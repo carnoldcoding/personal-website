@@ -16,7 +16,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 920);
-  const [Loading, setLoading] = useState(true);
+  const [Loading, setLoading] = useState(false);
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 920);
   };
@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 3100);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);

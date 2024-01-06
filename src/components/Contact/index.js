@@ -25,7 +25,7 @@ const Contact = () => {
             y: -50,
             opacity: 0
           },
-          "-=.35"
+          "-=.40"
         ).to(letter,{
             color: "white"
         },"-=.45")
@@ -33,8 +33,8 @@ const Contact = () => {
 
       tl.current.from(mail.current, {
         opacity: 0,
-        y: -100,
-      }, "-=.3");
+        y: -50,
+      }, "-=.6");
     }, scope);
     return () => ctx.revert();
   }, []);

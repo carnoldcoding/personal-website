@@ -17,10 +17,7 @@ const About = () => {
       tl.current = gsap.timeline({
         scrollTrigger: {
           trigger: scope.current,
-          start: "top top",
-            end: "+=500",
-            pin: true,
-          scrub: 1,
+          start: "top 200px"
         },
       });
 
