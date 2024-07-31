@@ -1,10 +1,22 @@
 import speedy from "../../images/speedydoodle.png";
+import poke from "../../images/Poke.png";
 const featured1 = {
-  header: "Sales Site",
+  header: "Service Site",
   site: "Speedydoodle Art",
   image: speedy,
+  link: "https://speedydoodle.com/",
+  reverse: true,
   description:
     "Single Page Application designed with the intent of showcasing the client's artistic talent while retaining industry standards to simplify user experience.",
+};
+
+const featured2 = {
+  header: "Pokedex App",
+  site: "Generation VI Pokedex",
+  image: poke,
+  link: "https://carnoldcoding.github.io/pokedex/",
+  description:
+    "Single Page Application developed in Node.JS with HTML/SASS/Typescript and packaged/shipped with Vite. Leverages the community driven PokeAPI over HTTP to visualize data in a glassmorphic design.",
 };
 
 const projects = [
@@ -36,4 +48,4 @@ const projects = [
   
 ];
 
-export { featured1, projects };
+export { featured1, featured2, projects };

@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: center;
   font-family: $primary-font;
+  &.reverse{
+    flex-direction: row-reverse;
+  }
   .content {
     z-index: 1;
     position: relative;
@@ -12,6 +15,9 @@
     flex-direction: column;
     gap: 1rem;
     header {
+      &.reverse{
+        text-align: right;
+      }
       h3 {
         color: $primary;
       }
@@ -42,6 +48,11 @@
     max-height: 500px;
     overflow-y: hidden;
     border-radius: 5px;
+    position: relative;
+    &.reverse{
+      margin-right: -100px;
+      margin-left: unset;
+    }
     &::after{
       display: flex;
       justify-content: center;
@@ -52,7 +63,7 @@
       letter-spacing: 5px;
       font-size: 32px;
       color: white;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       height: 100%;
@@ -78,9 +89,12 @@
 }
 
 @media screen and (max-width: 920px) {
-  .featured {
-    flex-direction: column-reverse;
+  .featured, .reverse {
+    flex-direction: column-reverse !important;
     align-items: center;
+    header{
+      text-align: center !important;
+    }
     .content {
       background: $background;
       margin-top: -100px;
