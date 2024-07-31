@@ -37,6 +37,9 @@ section{
   &#Contact{
     margin-bottom: clamp(200px, 30vw, 400px)
   }
+  &#Home{
+    margin-top: clamp(50px, 30vw, 100px);
+  }
 }
 #root {
   position: relative;
