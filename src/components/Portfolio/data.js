@@ -1,10 +1,11 @@
 import speedy from "../../images/speedydoodle.png";
-import poke from "../../images/Poke.png";
+import poke from "../../images/Poke2.png";
 const featured1 = {
   header: "Service Site",
   site: "Speedydoodle Art",
   image: speedy,
   link: "https://speedydoodle.com/",
+  stack: [ "React", "Node", "HTML", "SASS", "GoogleAPIs", "SMTP Server", "Javascript"],
   reverse: true,
   description:
     "Single Page Application designed with the intent of showcasing the client's artistic talent while retaining industry standards to simplify user experience.",
@@ -14,6 +15,7 @@ const featured2 = {
   header: "Pokedex App",
   site: "Generation VI Pokedex",
   image: poke,
+  stack: ["HTML", "SASS", "Typescript", "Node", "Vite", "PokeAPI", "GSAP"],
   link: "https://carnoldcoding.github.io/pokedex/",
   description:
     "Single Page Application developed in Node.JS with HTML/SASS/Typescript and packaged/shipped with Vite. Leverages the community driven PokeAPI over HTTP to visualize data in a glassmorphic design.",
