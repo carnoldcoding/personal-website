@@ -16,10 +16,12 @@ const FeaturedProject = ({ header, site, image, description, infoRef, imgRef, li
             return <h4>{item}</h4>
           })}
         </div>
-        <div className="mobile-view-site">
-          <p>view site</p>
-          <a href={link} target="_blank"><ion-icon name="eye-outline"></ion-icon></a>
-        </div>
+        <a href={link} target="_blank">
+          <div className="mobile-view-site">
+            <p>view site</p>
+            <ion-icon name="eye-outline"></ion-icon>
+          </div>
+        </a>
       </div>
       <a href={link} target="_blank">
         <div className={reverse ? "image reverse" : "image"} ref={imgRef}>
