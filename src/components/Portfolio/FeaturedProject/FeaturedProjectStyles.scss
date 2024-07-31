@@ -33,13 +33,42 @@
   }
   a{
     transition: all .2s ease;
-    &:hover{
-      transform: translateY(-10px);
-    }
+    display: inline-block;
+    position: relative;
   }
   .image {
     width: clamp(500px, 32vw, 600px);
     margin-left: -100px;
+    max-height: 500px;
+    overflow-y: hidden;
+    border-radius: 5px;
+    &::after{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: 'Visit Site';
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 32px;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,.2);
+      backdrop-filter: blur(5px);
+      pointer-events: none;
+      opacity: 0;
+      transition: all .2s ease;
+    }
+    &:hover{
+      cursor: pointer;
+      &::after{
+        opacity: 1;
+      }
+    }
     img {
       width: 100%;
       object-fit: cover;

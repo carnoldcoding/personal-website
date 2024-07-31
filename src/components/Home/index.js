@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, useEffect } from "react";
 import ProfilePic from "../../images/PFP.png";
 import "./HomeStyles.scss";
 import gsap from "gsap";
@@ -33,6 +33,13 @@ const Home = () => {
     return () => ctx.revert();
   }, []);
 
+  const handleClick = function(e){
+    document.getElementById('About').scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }
+
   return (
     <section id="Home" ref={scope}>
       <article>
@@ -41,8 +48,8 @@ const Home = () => {
           Cam.<span>Code</span>
         </p>
       </article>
-      <a href="#About" ref={button}>
-        <button data-text="start">start</button>
+      <a ref={button}>
+        <button onClick={handleClick} data-text="start">start</button>
       </a>
     </section>
   );

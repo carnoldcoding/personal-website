@@ -46,14 +46,6 @@ const ContactBar = () => {
             </a>
           </li>
           <li ref={(e)=>links.current.push(e)}>
-            <a
-              href="https://www.figma.com/files/user/1117910517398208271?fuid=1117910517398208271"
-              target="_blank"
-            >
-              <ion-icon name="logo-figma"></ion-icon>
-            </a>
-          </li>
-          <li ref={(e)=>links.current.push(e)}>
             <a href="mailto:carnoldcoding@gmail.com" target="_blank">
               <ion-icon name="mail"></ion-icon>
             </a>

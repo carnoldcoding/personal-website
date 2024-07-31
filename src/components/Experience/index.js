@@ -56,7 +56,7 @@ const Experience = ({ job, company, timeframe, achievements }) => {
     }, []);
 
     return (
-        <div id="Experience" ref={scope}>
+        <section id="Experience" ref={scope}>
             <article className="experience">
                 <header>
                     <h1 ref={title}>
@@ -90,7 +90,7 @@ const Experience = ({ job, company, timeframe, achievements }) => {
                     </a>
                 </aside>
             </article>
-        </div>
+        </section>
     );
 };
 

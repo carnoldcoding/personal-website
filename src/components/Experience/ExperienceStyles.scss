@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 .experience {
   max-width: $content-width;
@@ -17,7 +16,10 @@
     h1 {
       position: relative;
       font-size: $header-size;
+      font-weight: 300;
       color: white;
+      text-transform: uppercase;
+      letter-spacing: 7px;
       span {
         position: relative;
         &::after {
