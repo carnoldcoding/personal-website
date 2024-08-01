@@ -2,7 +2,7 @@ import React from "react";
 import "./PortfolioStyles.scss";
 import FeaturedProject from "./FeaturedProject";
 import Projects from "./Projects";
-import { featured1, featured2, projects } from "./data";
+import { featured1, featured2, featured3 } from "./data";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useRef, useLayoutEffect } from "react";
@@ -45,7 +45,7 @@ const Portfolio = () => {
       </h1>
       <FeaturedProject infoRef={info} imgRef={img} {...featured1} />
       <FeaturedProject infoRef={info} imgRef={img} {...featured2} />
-
+      <FeaturedProject infoRef={info} imgRef={img} {...featured3} />
 
       {/* <Projects projects={projects} /> */}
     </section>

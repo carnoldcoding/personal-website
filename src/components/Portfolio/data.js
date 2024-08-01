@@ -1,5 +1,6 @@
 import speedy from "../../images/speedydoodle.png";
 import poke from "../../images/Poke2.png";
+import wordle from "../../images/wordle.png";
 const featured1 = {
   header: "Service Site",
   site: "Speedydoodle Art",
@@ -11,12 +12,22 @@ const featured1 = {
     "Single Page Application designed with the intent of showcasing the client's artistic talent while retaining industry standards to simplify user experience.",
 };
 
-const featured2 = {
+ const featured2 = {
+  header: "Spelling App",
+  site: "Wordle Plus",
+  image: wordle,
+  stack: ["HTML", "SASS", "Javascript", "Node", "WordAPI"],
+  link: "https://carnoldcoding.github.io/wordle-clone/",
+  description: "Single Page Application developed in Node.JS with HTML/SASS/Typescript, hosted on Github through pages. Leverages an open source language generative API model to query the english lexicon."
+}
+
+const featured3 = {
   header: "Pokedex App",
   site: "Generation VI Pokedex",
   image: poke,
   stack: ["HTML", "SASS", "Typescript", "Node", "Vite", "PokeAPI", "GSAP"],
   link: "https://carnoldcoding.github.io/pokedex/",
+  reverse: true,
   description:
     "Single Page Application developed in Node.JS with HTML/SASS/Typescript and packaged/shipped with Vite. Leverages the community driven PokeAPI over HTTP to visualize data in a glassmorphic design.",
 };
@@ -50,4 +61,4 @@ const projects = [
   
 ];
 
-export { featured1, featured2, projects };
+export { featured1, featured2, featured3, projects };
