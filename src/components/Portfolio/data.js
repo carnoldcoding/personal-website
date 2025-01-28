@@ -1,6 +1,7 @@
 import speedy from "../../images/speedydoodle.png";
 import poke from "../../images/Poke2.png";
 import wordle from "../../images/wordle.png";
+import sharaway from "../../images/sharaway.png";
 const featured1 = {
   header: "Service Site",
   site: "Speedydoodle Art",
@@ -32,6 +33,15 @@ const featured3 = {
     "Single Page Application developed in Node.JS with HTML/SASS/Typescript and packaged/shipped with Vite. Leverages the community driven PokeAPI over HTTP to visualize data in a glassmorphic design.",
 };
 
+const featured4 = {
+  header: "Consultation Website",
+  site: "Sharaway Strategic Consulting",
+  image: sharaway,
+  stack: ["HTML", "Typescript", "Tailwind", "Node", "Vite"],
+  reverse: false,
+  description: "Single Page Application developed in the Node.JS runtime packaged and shipped with Vite. Designed for an older target audience with ADA standards in mind."
+}
+
 const projects = [
   {
     title: "Sharaway Consulting",
@@ -61,4 +71,4 @@ const projects = [
   
 ];
 
-export { featured1, featured2, featured3, projects };
+export { featured1, featured2, featured3, featured4, projects };
