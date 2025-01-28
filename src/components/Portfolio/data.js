@@ -38,6 +38,7 @@ const featured4 = {
   site: "Sharaway Strategic Consulting",
   image: sharaway,
   stack: ["HTML", "Typescript", "Tailwind", "Node", "Vite"],
+  link: "https://www.sharawayconsulting.com/",
   reverse: false,
   description: "Single Page Application developed in the Node.JS runtime packaged and shipped with Vite. Designed for an older target audience with ADA standards in mind."
 }
