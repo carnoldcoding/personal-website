@@ -2,6 +2,8 @@ import speedy from "../../images/speedydoodle.png";
 import poke from "../../images/Poke2.png";
 import wordle from "../../images/wordle.png";
 import sharaway from "../../images/sharaway.png";
+import synthetic from "../../images/synthetic.png"
+
 const featured1 = {
   header: "Service Site",
   site: "Speedydoodle Art",
@@ -43,7 +45,24 @@ const featured4 = {
   description: "Single Page Application developed in the Node.JS runtime packaged and shipped with Vite. Designed for an older target audience with ADA standards in mind."
 }
 
+const featured5 = {
+  header: "Digital Blog",
+  site: "Synthetic Soul",
+  image: synthetic,
+  stack: ["React", "Typescript", "Tailwind", "Express", "MongoDB"],
+  link: "https://syntheticsoul.me/",
+  reverse: false,
+  description: "Full stack React blog application served on Cloudflare with a MongoDB database accessed by an admin panel that routes to an Express backend. The site sports a unique polished retro operating system aesthetic that remains consistent across all devices for a performant experience."
+}
+
 const projects = [
+  {
+    title: "Synthetic Soul",
+    description:
+      "Full stack React blog application served on Cloudflare with a MongoDB database accessed by an admin panel that routes to an Express backend. The site sports a unique polished retro operating system aesthetic that remains consistent across all devices for a performant experience.",
+      git: "https://github.com/carnoldcoding/mind-dump",
+      live: "https://syntheticsoul.me/"
+  },
   {
     title: "Sharaway Consulting",
     description:
@@ -72,4 +91,4 @@ const projects = [
   
 ];
 
-export { featured1, featured2, featured3, featured4, projects };
+export { featured1, featured2, featured3, featured4, featured5, projects };

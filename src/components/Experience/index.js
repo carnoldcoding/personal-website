@@ -4,7 +4,7 @@ import { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const Experience = ({ job, company, timeframe, achievements }) => {
+const Experience = ({experience}) => {
     const scope = useRef();
     const tl = useRef();
     const title = useRef();
@@ -58,37 +58,46 @@ const Experience = ({ job, company, timeframe, achievements }) => {
     return (
         <section id="Experience" ref={scope}>
             <article className="experience">
-                <header>
-                    <h1 ref={title}>
-                        <span>Experience</span>
-                    </h1>
-                    <div className="subtext" ref={subtext}>
-                        <h3>
-                            {job} <span>@{company}</span>
-                        </h3>
-                        <h3>{timeframe}</h3>
+                <h1 ref={title}>
+                    <span>Experience</span>
+                </h1>
+                {
+                    experience.map(({job, company, timeframe, achievements}) => {
+                    return (
+                        <div style={{marginBottom: "25px"}}>
+                        <header>
+                            <div className="subtext" ref={subtext}>
+                                <h3>
+                                    {job} <span>@{company}</span>
+                                </h3>
+                                <h3>{timeframe}</h3>
+                            </div>
+                        </header>
+                        <ul className="achievements">
+                            {achievements.map((achievement, index) => {
+                                return (
+                                    <li
+                                        ref={(el) => {
+                                            list.current.push(el);
+                                        }}
+                                        key={index}
+                                    >
+                                        {achievement}
+                                    </li>
+                                );
+                            })}
+                        </ul>
                     </div>
-                </header>
-                <ul className="achievements">
-                    {achievements.map((achievement, index) => {
-                        return (
-                            <li
-                                ref={(el) => {
-                                    list.current.push(el);
-                                }}
-                                key={index}
-                            >
-                                {achievement}
-                            </li>
-                        );
-                    })}
-                </ul>
+                    )
+                    })
+                }
                 <aside className="download" ref={resume}>
                     <a href={resumeDL} target="_blank" rel="noopener noreferrer">
                         <ion-icon name="cloud-download-outline"></ion-icon>
                         <p>Full Resume</p>
                     </a>
                 </aside>
+
             </article>
         </section>
     );

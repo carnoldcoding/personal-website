@@ -9,7 +9,7 @@ import Traits from "./components/Traits";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
-import {experience1} from "./components/Experience/data.js"
+import {experience} from "./components/Experience/data.js"
 import "./App.scss";
 import "./general.scss";
 import { useState, useEffect } from "react";
@@ -40,7 +40,7 @@ function App() {
           <Home />
           <About />
           <Traits />
-          <Experience {...experience1}/>
+          <Experience experience = {experience}/>
           <Portfolio />
           <Contact />
           {isMobile ? <MobileFooter /> : <Footer />}
