@@ -43,12 +43,11 @@ const Portfolio = () => {
       <h1 className="title" ref={title}>
         Portfolio
       </h1>
+      <FeaturedProject infoRef={info} imgRef={img} {...featured4} />
       <FeaturedProject infoRef={info} imgRef={img} {...featured5} />
       <FeaturedProject infoRef={info} imgRef={img} {...featured1} />
       <FeaturedProject infoRef={info} imgRef={img} {...featured2} />
       <FeaturedProject infoRef={info} imgRef={img} {...featured3} />
-      <FeaturedProject infoRef={info} imgRef={img} {...featured4} />
-
       {/* <Projects projects={projects} /> */}
     </section>
   );
